@@ -7,7 +7,6 @@
     font-family: 'Manrope', sans-serif;
 }
 
-
 :root{
     /* Colors Primary */
     --soft-cyan-full-slider-bar: hsl(174, 77%, 80%);
@@ -23,18 +22,27 @@
     --dark-desaturated-blue-text-CTA-background: hsl(227, 35%, 25%);
 }
 
-header p{
-    padding: 0 8rem;
-}
-
-header h1{
-    font-size: 1.5rem;
-    line-height: 4rem;
+body{
+    background: url(./images/bg-pattern.svg) no-repeat;
 }
 
 header,main{
     display: grid;
     justify-content: center;
+}
+
+header{
+    background: url(./images/pattern-circles.svg) no-repeat center;
+    padding: 5rem 0;
+}
+
+header p{
+    padding: 0 9rem;
+}
+
+header h1{
+    font-size: 1.5rem;
+    line-height: 4rem;
 }
 
 header,.title-info-card,footer{
@@ -45,11 +53,12 @@ main{
     border-radius: 10px;
     padding: 2rem 0 0;
     box-shadow: 1px 2px 5px 2px var(--light-grayish-blue-empty-slider-bar);
-    margin: 1rem;
-    place-items: center;
+    margin: 1rem 2rem;
 }
 
 .column-1,.column-2{
+    display: grid;
+    place-items: center;
     padding: 1rem;
 }
 

@@ -18,44 +18,47 @@
   <main>
     <section class="column-1">
       <p class="title-info-card text-info2-card">100k PAGEVIEWS</p>
-      <div class="bar-progress">
-        <button>
-          <figure>
-            <img src="./images/icon-slider.svg" alt="icon-slider">
-          </figure>
-        </button>
-      </div>
+      <label for="bar-progress" class="button-bar-progress"></label>
+      <input type="range" min="1" max="5" id="bar-progress">
 
-      <p>$ <span>/month</span></p>
-  
+      <p><span class="price-by-month">$</span> / month</p>
+
       <div class="rows-info2-card">
         <span class="text-info2-card">Monthly Billing</span>
-        <span>
-          <input type="checkbox" name="" id="toggle" class="button-toggle">
-          <label for="toggle"></label>
-        </span>
+        <input type="checkbox" name="" id="toggle" class="button-toggle">
+        <label for="toggle"></label>
         <span class="text-info2-card">Yearly Billing</span>
-        <span class="discount">-25%</span>
+        <span class="discount">-25%
+          <span>discount</span>
+        </span>
       </div>
     </section>
 
     <section class="column-2">
-      <figure>
-        <img src="./images/icon-check.svg" alt="icon-check">
-        </img>
-        <figcaption>Unlimited websites</figcaption>
-      </figure>
-      <figure>
-        <img src="./images/icon-check.svg" alt="icon-check">
-        </img>
-        <figcaption>100% data ownership</figcaption>
-      </figure>
-      <figure>
-        <img src="./images/icon-check.svg" alt="icon-check">
-        </img>
-        <figcaption>Email reports</figcaption>
-      </figure>
-  
+      <ul>
+        <li>
+          <figure>
+            <img src="./images/icon-check.svg" alt="icon-check">
+            </img>
+            <figcaption>Unlimited websites</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="./images/icon-check.svg" alt="icon-check">
+            </img>
+            <figcaption>100% data ownership</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="./images/icon-check.svg" alt="icon-check">
+            </img>
+            <figcaption>Email reports</figcaption>
+          </figure>
+        </li>
+      </ul>
+
       <button type="submit" class="btn-start-trial">Start my trial</button>
     </section>
   </main>

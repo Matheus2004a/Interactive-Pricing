@@ -10,7 +10,9 @@
 :root{
     /* Colors Primary */
     --soft-cyan-full-slider-bar: hsl(174, 77%, 80%);
-    --strong-cyan-slider-background: hsl(174, 86%, 45%);--light-grayish-red-discount-background: hsl(14, 92%, 95%);
+    --strong-cyan-slider-background: hsl(174, 86%, 45%);
+    --slider-circle-active: hsl(174, 87%, 35%);
+    --light-grayish-red-discount-background: hsl(14, 92%, 95%);
     --light-red-discount-text: hsl(15, 100%, 70%);
     --pale-blue-CTA-text: hsl(226, 100%, 87%);
     /* Colors Neutral */
@@ -23,6 +25,7 @@
 }
 
 body{
+    display: grid;
     background: url(./images/bg-pattern.svg) no-repeat;
 }
 
@@ -33,11 +36,11 @@ header,main{
 
 header{
     background: url(./images/pattern-circles.svg) no-repeat center;
-    padding: 5rem 0;
+    padding: 3rem 0;
 }
 
 header p{
-    padding: 0 9rem;
+    padding: 0 8rem;
 }
 
 header h1{
@@ -52,44 +55,39 @@ header,.title-info-card,footer{
 main{
     border-radius: 10px;
     padding: 2rem 0 0;
-    box-shadow: 1px 2px 5px 2px var(--light-grayish-blue-empty-slider-bar);
+    box-shadow: 0 1rem 1.5rem var( --light-grayish-blue-empty-slider-bar);
     margin: 1rem 2rem;
+    background-color: var(--white-pricing-component-background);
 }
 
 .column-1,.column-2{
     display: grid;
     place-items: center;
-    padding: 1rem;
+    padding: 2rem 0;
 }
 
 .column-1{
     border-bottom: 1px solid var(--light-grayish-blue-empty-slider-bar);
 }
 
-.column-1 .bar-progress button{
-    position: relative;
-    right: 1rem;
-    padding: 10px 13px;
-    border-radius: 50%;
-    background-color: var(--strong-cyan-slider-background);
-    box-shadow: 1px 10px 30px 10px var(--soft-cyan-full-slider-bar);
-}
-
-.column-1 .bar-progress button:hover,.btn-start-trial:hover{
+.btn-start-trial:hover{
+    color: var(--white-pricing-component-background);
     cursor: pointer;
 }
 
-.bar-progress{
+.column-1 #bar-progress{
     display: flex;
     align-items: center;
-    width: 25rem;
+    width: 100%;
     height: 0.6rem;
     margin: 3rem 0;
     border-radius: 10px;
+    cursor: pointer;
+    appearance: none;
     background-color: var(--light-grayish-blue-empty-slider-bar);
 }
 
-.bar-progress::before{
+.column-1 #bar-progress::before{
     content: '';
     width: 50%;
     height: 100%;
@@ -97,29 +95,64 @@ main{
     background-color: var(--soft-cyan-full-slider-bar);
 }
 
+.column-1 #bar-progress::after{
+    content: '';
+    border-radius: 50%;
+    padding: 1.5rem;
+    position: relative;
+    right: 40%;
+    background: url(./images/icon-slider.svg) no-repeat center var(--strong-cyan-slider-background);
+    box-shadow: 1px 10px 30px 10px var(--soft-cyan-full-slider-bar);
+}
+
+.column-1 p:not(.title-info-card){
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--grayish-blue-text);
+}
+
+.column-1 p .price-by-month{
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+}
+
 .rows-info2-card{
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.rows-info2-card .discount span,.button-toggle{
+    display: none;
 }
 
 a{
     text-decoration: none;
 }
 
-.button-toggle{
-    display: none;
+ul{
+    list-style: none;
+    display: grid;
+    place-items: center;
 }
 
 .button-toggle + label{
-    width: 40px;
+    width: 45px;
     height: 20px;
     border-radius: 20px;
     position: relative;
-    background-color: var(--toggle-light);
+    background-color: var(--light-grayish-blue-toggle-background);
     cursor: pointer;
     padding: 5px;
     transition: all 0.3s ease-in;
+}
+
+.button-toggle + label:hover{
+    background-color: var(--soft-cyan-full-slider-bar);
 }
 
 .button-toggle + label::before{
@@ -128,19 +161,19 @@ a{
     height: 15px;
     border-radius: 50%;
     position: absolute;
-    inset: 2.5px 22px 0;
-    background-color: var(--white-BG);
+    inset: 2.5px 4px;
+    background-color: var(--white-pricing-component-background);
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
 
 .button-toggle:checked + label{
-    background: var(--toggle-dark);
+    background: var(--strong-cyan-slider-background);
 }
 
 .button-toggle:checked + label::before{
-    background-color: var(--very-dark-blue-BG);
-    left: calc(100% - 37px);
+    background-color: var(--white-pricing-component-background);
+    left: calc(100% - 20px);
 }
 
 .discount{
@@ -149,7 +182,7 @@ a{
     border-radius: 20px;
     color: var(--light-red-discount-text);
     background-color: hsla(15, 100%, 70%, 0.15);
-    padding: 5px 10px;
+    padding: 5px 12px;
 }
 
 figure{
@@ -169,11 +202,11 @@ button,input{
 }
 
 .btn-start-trial{
-    width: 100%;
+    width: 60%;
     padding: 1rem;
     border-radius: 30px;
     font-weight: 800;
-    margin: 3rem 0;
+    margin: 3rem 0 0;
     color: var(--light-grayish-blue-toggle-background);
     background-color: var(--dark-desaturated-blue-text-CTA-background);
 }

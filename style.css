@@ -53,7 +53,6 @@ header,.title-info-card,footer{
 
 main{
     border-radius: 10px;
-    padding: 2rem 0;
     box-shadow: 0 1rem 1.5rem var( --light-grayish-blue-empty-slider-bar);
     margin: 1rem 2rem;
     background-color: var(--white-pricing-component-background);
@@ -62,10 +61,11 @@ main{
 .column-1,.column-2{
     display: grid;
     place-items: center;
-    padding: 2rem;
+    padding: 3rem 2rem;
 }
 
 .column-1{
+    position: relative;
     border-bottom: 1px solid var(--light-grayish-blue-empty-slider-bar);
 }
 
@@ -138,7 +138,7 @@ main{
 .column-1 p:not(.title-info-card){
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .5rem;
     color: var(--grayish-blue-text);
 }
 
@@ -254,8 +254,20 @@ footer a{
     }
 
     main{
-        width: 60%;
+        width: 55%;
         margin: 0 auto;
+    }
+
+    .column-1 p:not(.title-info-card){
+        position: absolute;
+        top: 2.3rem;
+        right: 2rem;
+    }
+
+    .column-1 .title-info-card {
+        position: absolute;
+        top: 3rem;
+        left: 2rem;
     }
 
     .column-2{

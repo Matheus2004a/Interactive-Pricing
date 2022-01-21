@@ -45,6 +45,5 @@ function calculateDiscount() {
         let valueDiscount = price * 25 / 100
         price = price - valueDiscount
         priceByMonth.innerHTML = `$${price.toFixed(2)}`
-        console.log(price)
     }
 }

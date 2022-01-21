@@ -8,24 +8,22 @@ inputChoosePrice.addEventListener("input", validityPrice)
 let price = 0
 
 function validityPrice() {
-    let chosenPrice = inputChoosePrice.value
-
-    if (chosenPrice == 1) {
+    if (inputChoosePrice.value == 1) {
         price = 8
         quantifyPageViews.innerHTML = "10k PAGEVIEWS"
         priceByMonth.innerHTML = "$8.00"
     }
-    else if (chosenPrice == 2) {
+    else if (inputChoosePrice.value == 2) {
         price = 12
         quantifyPageViews.innerHTML = "50k PAGEVIEWS"
         priceByMonth.innerHTML = "$12.00"
     }
-    else if (chosenPrice == 3) {
+    else if (inputChoosePrice.value == 3) {
         price = 16
         quantifyPageViews.innerHTML = "100k PAGEVIEWS"
         priceByMonth.innerHTML = "$16.00"
     }
-    else if (chosenPrice == 4) {
+    else if (inputChoosePrice.value == 4) {
         price = 24
         quantifyPageViews.innerHTML = "500k PAGEVIEWS"
         priceByMonth.innerHTML = "$24.00"

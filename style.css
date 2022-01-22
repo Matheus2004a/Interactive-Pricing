@@ -20,8 +20,10 @@
     --very-pale-blue-main-background: hsl(230, 100%, 99%);
     --light-grayish-blue-empty-slider-bar: hsl(224, 65%, 95%);
     --light-grayish-blue-toggle-background: hsl(223, 50%, 87%);
+    --opacity-discount: hsla(15, 100%, 70%, 0.15);
     --grayish-blue-text: hsl(225, 20%, 60%);
     --dark-desaturated-blue-text-CTA-background: hsl(227, 35%, 25%);
+    --black: hsl(0, 0%, 0%);
 }
 
 body{
@@ -148,7 +150,7 @@ main{
 
 .column-1 p .price-by-month{
     font-size: 2rem;
-    color: black;
+    color: var(--black);
     font-weight: bold;
 }
 
@@ -214,7 +216,7 @@ ul{
     font-size: 0.8em;
     border-radius: 20px;
     color: var(--light-red-discount-text);
-    background-color: hsla(15, 100%, 70%, 0.15);
+    background-color: var(--opacity-discount);
     padding: 5px 12px;
 }
 

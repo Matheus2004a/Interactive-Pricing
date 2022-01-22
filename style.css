@@ -80,16 +80,27 @@ main{
     display: inline-block;
     width: 100%;
     margin: 3rem 0;
+    position: relative;
 }
 
 .column-1 #bar-progress{
     width: 100%;
     cursor: pointer;
+    -webkit-appearance: none;
     appearance: none;
 }
 
+.progress-bar{
+    width: 50%;
+    height: .5rem;
+    border-radius: 1rem;
+    background-color: var(--strong-cyan-slider-background);
+    position: absolute;
+    top: .5rem; 
+}
+
 #bar-progress::-webkit-slider-runnable-track {
-    background: var(--soft-cyan-full-slider-bar);
+    background: var(--light-grayish-blue-empty-slider-bar);
     height: .5rem;
     border-radius: 1rem;
 }

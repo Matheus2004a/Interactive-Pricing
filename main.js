@@ -8,7 +8,7 @@ inputChoosePrice.addEventListener("input", validityPrice)
 
 let price = 0
 
-function validityPrice() {
+function validityPrice(event) {
     if (inputChoosePrice.value == 1) {
         price = 8
         quantifyPageViews.innerHTML = "10k PAGEVIEWS"
@@ -34,6 +34,9 @@ function validityPrice() {
         quantifyPageViews.innerHTML = "1M PAGEVIEWS"
         priceByMonth.innerHTML = "$36.00"
     }
+    const value = event.currentTarget.value
+    let percent = (value / 5.5) * 100;
+    inputChoosePrice.style.background = `linear-gradient(to right, var(--strong-cyan-slider-background) ${percent}%, var(--light-grayish-blue-empty-slider-bar) ${percent}%)`;
 }
 
 togglePrice.addEventListener("click", calculateDiscount)

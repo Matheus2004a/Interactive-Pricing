@@ -89,7 +89,7 @@ main{
     appearance: none;
     height: .5rem;
     border-radius: 1rem;
-    background: linear-gradient(90deg, var(--strong-cyan-slider-background) 50%, var(--light-grayish-blue-empty-slider-bar) 0);
+    background: linear-gradient(to right, var(--strong-cyan-slider-background) 50%, var(--light-grayish-blue-empty-slider-bar) 0);
 }
   
 /* Formatando estilização do botão do input range */

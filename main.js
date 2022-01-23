@@ -8,23 +8,23 @@ inputChoosePrice.addEventListener("input", validityPrice)
 
 let price = 0
 
-function validityPrice(event) {
-    if (inputChoosePrice.value == 1) {
+function validityPrice() {
+    if (inputChoosePrice.value == 0) {
         price = 8
         quantifyPageViews.innerHTML = "10k PAGEVIEWS"
         priceByMonth.innerHTML = "$8.00"
     }
-    else if (inputChoosePrice.value == 2) {
+    else if (inputChoosePrice.value == 1) {
         price = 12
         quantifyPageViews.innerHTML = "50k PAGEVIEWS"
         priceByMonth.innerHTML = "$12.00"
     }
-    else if (inputChoosePrice.value == 3) {
+    else if (inputChoosePrice.value == 2) {
         price = 16
         quantifyPageViews.innerHTML = "100k PAGEVIEWS"
         priceByMonth.innerHTML = "$16.00"
     }
-    else if (inputChoosePrice.value == 4) {
+    else if (inputChoosePrice.value == 3) {
         price = 24
         quantifyPageViews.innerHTML = "500k PAGEVIEWS"
         priceByMonth.innerHTML = "$24.00"
@@ -34,9 +34,9 @@ function validityPrice(event) {
         quantifyPageViews.innerHTML = "1M PAGEVIEWS"
         priceByMonth.innerHTML = "$36.00"
     }
-    const value = event.currentTarget.value
-    let percent = (value / 5.5) * 100;
-    inputChoosePrice.style.background = `linear-gradient(to right, var(--strong-cyan-slider-background) ${percent}%, var(--light-grayish-blue-empty-slider-bar) ${percent}%)`;
+    const value = inputChoosePrice.value
+    let percent = (value / 4) * 100;
+    inputChoosePrice.style.background = `linear-gradient(to right, var(--strong-cyan-slider-background) ${percent}%, var(--light-grayish-blue-empty-slider-bar) ${percent}%)`
 }
 
 togglePrice.addEventListener("click", calculateDiscount)

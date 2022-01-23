@@ -1,6 +1,6 @@
 const priceByMonth = document.querySelector(".price-by-month")
 const quantifyPageViews = document.querySelector(".title-info-card")
-const inputChoosePrice = document.querySelector("#button-progress")
+const inputChoosePrice = document.querySelector("#input-progress")
 const togglePrice = document.querySelector(".button-toggle")
 const progressBar = document.querySelector("#progress-bar")
 

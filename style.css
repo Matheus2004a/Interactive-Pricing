@@ -82,58 +82,38 @@ main{
     position: relative;
 }
 
-.section-1 #progress-bar{
-    display: block;
-    width: 48%;
-    height: .5rem;
-    border-radius: 1rem;
-    background-color: var(--strong-cyan-slider-background);
-    position: absolute;
-    top: .5rem; 
-}
-
-.section-1 #button-progress{
+.section-1 #input-progress{
     width: 100%;
     cursor: pointer;
     -webkit-appearance: none;
     appearance: none;
-}
-
-#button-progress::-webkit-slider-runnable-track {
-    background: var(--light-grayish-blue-empty-slider-bar);
     height: .5rem;
     border-radius: 1rem;
-}
-  
-#button-progress::-moz-range-track{
-    background: var(--light-grayish-blue-toggle-background);
-    height: .5rem;
-    border-radius: 1rem;
+    background: linear-gradient(90deg, var(--strong-cyan-slider-background) 50%, var(--light-grayish-blue-empty-slider-bar) 0);
 }
   
 /* Formatando estilização do botão do input range */
-#button-progress::-webkit-slider-thumb {
+#input-progress::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     background: url(./images/icon-slider.svg) no-repeat center var(--strong-cyan-slider-background);
     height: 2rem;
     width: 2rem;
     padding: 1.2rem;
-    margin-top: -15px;
     border-radius: 50%;
     box-shadow: 0 .5rem 2rem .5rem var(--soft-cyan-full-slider-bar);
 }
   
-#button-progress:hover::-webkit-slider-thumb {
+#input-progress:hover::-webkit-slider-thumb {
     background-color: var(--soft-cyan-full-slider-bar);
 }
   
-#button-progress:active::-webkit-slider-thumb {
+#input-progress:active::-webkit-slider-thumb {
     cursor: grabbing;
     background-color: var(--slider-circle-active);
 }
   
-#button-progress::-moz-range-thumb {
+#input-progress::-moz-range-thumb {
     border-radius: 50%;
     background: url(./images/icon-slider.svg) no-repeat center var(--slider-circle-active);
     height: 2rem;
@@ -141,7 +121,7 @@ main{
     box-shadow: 0 .5rem 2rem .5rem var(--soft-cyan-full-slider-bar);
 }
   
-#button-progress:active::-moz-range-thumb {
+#input-progress:active::-moz-range-thumb {
     cursor: grabbing;
     background-color: var(--slider-circle-active);
     opacity: 1;
@@ -152,7 +132,7 @@ main{
     color: var(--grayish-blue-text);
 }
 
-.section-1 p:not(.title-info-card),.rows-info2-card,figu{
+.section-1 p:not(.title-info-card),.rows-info2-card,figure{
     display: flex;
     align-items: center;
 }

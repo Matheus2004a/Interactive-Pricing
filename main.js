@@ -1,8 +1,8 @@
 const priceByMonth = document.querySelector(".price-by-month")
 const quantifyPageViews = document.querySelector(".title-info-card")
-const inputChoosePrice = document.querySelector("#bar-progress")
+const inputChoosePrice = document.querySelector("#button-progress")
 const togglePrice = document.querySelector(".button-toggle")
-const progressBar = document.querySelector(".progress-bar")
+const progressBar = document.querySelector("#progress-bar")
 
 inputChoosePrice.addEventListener("input", validityPrice)
 
@@ -34,8 +34,6 @@ function validityPrice() {
         quantifyPageViews.innerHTML = "1M PAGEVIEWS"
         priceByMonth.innerHTML = "$36.00"
     }
-    inputChoosePrice.style.left = this.value + "%"
-    progressBar.style.width = this.value + "%"
 }
 
 togglePrice.addEventListener("click", calculateDiscount)

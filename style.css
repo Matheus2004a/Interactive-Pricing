@@ -60,13 +60,13 @@ main{
     background-color: var(--white-pricing-component-background);
 }
 
-.column-1,.column-2{
+.section-1,.section-2{
     display: grid;
     place-items: center;
     padding: 3rem 2rem;
 }
 
-.column-1{
+.section-1{
     position: relative;
     border-bottom: 1px solid var(--light-grayish-blue-empty-slider-bar);
 }
@@ -77,21 +77,14 @@ main{
 }
 
 .slider-wrapper{
-    display: inline-block;
     width: 100%;
-    margin: 3rem 0;
+    margin: 4rem 0 3rem;
     position: relative;
 }
 
-.column-1 #bar-progress{
-    width: 100%;
-    cursor: pointer;
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-.progress-bar{
-    width: 50%;
+.section-1 #progress-bar{
+    display: block;
+    width: 48%;
     height: .5rem;
     border-radius: 1rem;
     background-color: var(--strong-cyan-slider-background);
@@ -99,24 +92,27 @@ main{
     top: .5rem; 
 }
 
-#bar-progress::-webkit-slider-runnable-track {
+.section-1 #button-progress{
+    width: 100%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+#button-progress::-webkit-slider-runnable-track {
     background: var(--light-grayish-blue-empty-slider-bar);
     height: .5rem;
     border-radius: 1rem;
 }
   
-#bar-progress:focus::-webkit-slider-runnable-track{
-    border: none;
-}
-  
-#bar-progress::-moz-range-track{
+#button-progress::-moz-range-track{
     background: var(--light-grayish-blue-toggle-background);
     height: .5rem;
     border-radius: 1rem;
 }
   
-/*Thumb / Slider */
-#bar-progress::-webkit-slider-thumb {
+/* Formatando estilização do botão do input range */
+#button-progress::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     background: url(./images/icon-slider.svg) no-repeat center var(--strong-cyan-slider-background);
@@ -128,17 +124,16 @@ main{
     box-shadow: 0 .5rem 2rem .5rem var(--soft-cyan-full-slider-bar);
 }
   
-#bar-progress:hover::-webkit-slider-thumb {
+#button-progress:hover::-webkit-slider-thumb {
     background-color: var(--soft-cyan-full-slider-bar);
 }
   
-#bar-progress:active::-webkit-slider-thumb {
+#button-progress:active::-webkit-slider-thumb {
     cursor: grabbing;
     background-color: var(--slider-circle-active);
 }
   
-#bar-progress::-moz-range-thumb {
-    border: none;
+#button-progress::-moz-range-thumb {
     border-radius: 50%;
     background: url(./images/icon-slider.svg) no-repeat center var(--slider-circle-active);
     height: 2rem;
@@ -146,29 +141,30 @@ main{
     box-shadow: 0 .5rem 2rem .5rem var(--soft-cyan-full-slider-bar);
 }
   
-#bar-progress:active::-moz-range-thumb {
+#button-progress:active::-moz-range-thumb {
     cursor: grabbing;
     background-color: var(--slider-circle-active);
     opacity: 1;
 }
 
-.column-1 p:not(.title-info-card){
-    display: flex;
-    align-items: center;
+.section-1 p:not(.title-info-card){
     gap: .5rem;
     color: var(--grayish-blue-text);
 }
 
-.column-1 p .price-by-month{
+.section-1 p:not(.title-info-card),.rows-info2-card,figu{
+    display: flex;
+    align-items: center;
+}
+
+.section-1 p .price-by-month{
     font-size: 2rem;
     color: var(--black);
     font-weight: bold;
 }
 
 .rows-info2-card{
-    display: flex;
     justify-content: center;
-    align-items: center;
     gap: 1rem;
 }
 
@@ -232,8 +228,6 @@ ul{
 }
 
 figure{
-    display: flex;
-    align-items: center;
     gap: 1rem;
     margin: .5rem 0;
 }
@@ -275,19 +269,19 @@ footer a{
         margin: 0 auto;
     }
 
-    .column-1 p:not(.title-info-card){
+    .section-1 p:not(.title-info-card){
         position: absolute;
         top: 2.3rem;
         right: 2rem;
     }
 
-    .column-1 .title-info-card {
+    .section-1 .title-info-card {
         position: absolute;
         top: 3rem;
         left: 2rem;
     }
 
-    .column-2{
+    .section-2{
         display: flex;
         justify-content: space-between;
         align-items: center;
